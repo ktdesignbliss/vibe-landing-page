@@ -24,7 +24,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "AXON Core — High-Performance Neural Computing",
-  description: "Premium fitness & luxury performance tech",
+  description: "Next-generation neuromorphic hardware designed for zero-latency neural synchronization and cognitive expansion.",
 };
 
 export default function RootLayout({
@@ -36,6 +36,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={`${archivoBlack.variable} ${interTight.variable} ${inter.variable} antialiased`}
+        suppressHydrationWarning
       >
         {children}
       </body>

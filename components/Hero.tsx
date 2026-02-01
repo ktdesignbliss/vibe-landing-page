@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { SectionWrapper } from "./SectionWrapper";
 import { NeuralNetworkBackground } from "./NeuralNetworkBackground";
@@ -42,16 +43,15 @@ export function Hero() {
             </Link>
           </div>
         </div>
-        {/* Right — 3D Neural visualization container */}
+        {/* Right — Hero image */}
         <div className="relative flex flex-1 items-center justify-center md:min-h-[500px]">
           <div className="relative aspect-square w-full max-w-md overflow-hidden border border-neutral-700/50 md:aspect-auto md:max-w-lg md:min-h-[450px]">
-            {/* Gradient overlay for depth */}
-            <div
-              className="pointer-events-none absolute inset-0"
-              style={{
-                background:
-                  "radial-gradient(circle at center, transparent 0%, var(--void) 70%)",
-              }}
+            <Image
+              src="/hero-image.jpg"
+              alt="Neural interface visualization"
+              fill
+              className="object-cover"
+              priority
             />
           </div>
         </div>
